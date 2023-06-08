@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navigational-header.component.css']
 })
 export class NavigationalHeaderComponent implements OnInit {
-  public navToggle = false;
+  public navToggle = window.innerWidth <= 1130?true:false;
   public toggleMenuIcon = false;
  
   constructor() {
