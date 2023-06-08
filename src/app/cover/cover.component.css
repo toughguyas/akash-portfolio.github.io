@@ -1,0 +1,33 @@
+.cover-head {
+    width: 100%;
+    height: 850px;
+    background: linear-gradient(
+        to right,
+    #edf0ff 0%,
+    #edf0ff 50%,
+    white 50%,
+    white 100%
+    );
+}
+.text-center {
+    text-align: center;
+    margin-top: 200px;
+}
+.hey-text {
+    font-weight: 800;
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vw;
+}
+.text-akash {
+    font-weight: 800;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8vw;
+}
+.text-iam{
+    font-weight: 900;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4vw;
+}

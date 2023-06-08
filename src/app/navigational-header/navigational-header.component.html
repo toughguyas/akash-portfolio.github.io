@@ -40,3 +40,56 @@
        </div>
     </div>
 </div>
+<div class="mobile-nav-head" *ngIf="navToggle">
+    <div class="float-lefti">
+        <img class="" src="./assets/images/ownlogo.png" alt="" height=" 80px" width="150px">    
+    </div>
+    <div class="float-righti">
+        <button class="btm" (click)="myFunction()">
+            <div class="container"  [ngClass]="{'change': toggleMenuIcon}">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </button>
+    </div>
+</div>
+<div class="row" *ngIf="navToggle">
+    <div style="background-color: black;" *ngIf ="toggleMenuIcon">
+        <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                Home
+            </h3>
+           </div><br>
+           <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                About
+            </h3>
+           </div><br>
+           <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                Resume
+            </h3>
+           </div><br>
+           <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                Services
+            </h3>
+           </div><br>
+           <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                Projects
+            </h3>
+           </div><br>
+           <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+               Blog
+            </h3>
+           </div><br>
+           <div class=" nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                Contact
+            </h3>
+           </div>
+    </div>
+</div>

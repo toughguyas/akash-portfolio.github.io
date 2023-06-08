@@ -7,11 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationalHeaderComponent implements OnInit {
   public navToggle = false;
+  public toggleMenuIcon = false;
  
   constructor() {
 
   }
   public ngOnInit(): void {
-    // window.onresize = () => this.navToggle = window.innerWidth <= 1130;
+    window.onresize = () => this.navToggle = window.innerWidth <= 1130;
+  }
+  public myFunction() {
+    this.toggleMenuIcon = !this.toggleMenuIcon;
   }
 }
