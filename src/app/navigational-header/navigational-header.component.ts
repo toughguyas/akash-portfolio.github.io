@@ -17,5 +17,10 @@ export class NavigationalHeaderComponent implements OnInit {
   }
   public myFunction() {
     this.toggleMenuIcon = !this.toggleMenuIcon;
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+});
   }
 }

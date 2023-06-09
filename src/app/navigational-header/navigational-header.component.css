@@ -13,6 +13,7 @@ h1 {
 {  
     width: 100%;
     height: 80px;
+    position: fixed;
     background: black;
 }
 .float-lefti {
@@ -28,6 +29,7 @@ h1 {
 {  
     width: 100%;
     height: 80px;
+    position: fixed;
     background: linear-gradient(
         to right,
     #edf0ff 0%,
