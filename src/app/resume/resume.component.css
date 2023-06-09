@@ -76,11 +76,5 @@ ul.no-bullets {
     padding: 0;
   }
 
-.mobile-about {background: linear-gradient(
-    to right,
-#edf0ff 0%,
-#edf0ff 49%,
-white 49%,
-white 100%
-);
+.mobile-about {background: linear-gradient(to right, #edf0ff, rgb(179, 231, 248));
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cover',
@@ -9,7 +10,7 @@ export class CoverComponent implements OnInit {
   public work = [ 'FULL STACK DEVELOPER' , 'PHILOLOGIST', 'ENTERTAINER','LOVER']
   public assignwork= 'FULL STACK DEVELOPER' ;
   public j=1;
-  constructor() {
+  constructor(private activatedRoute:ActivatedRoute) {
 
   }
   public ngOnInit(): void {
@@ -19,7 +20,15 @@ export class CoverComponent implements OnInit {
           if(this.j==4) {
             this.j=0;
           }
-        },2000);    
+        },2000);
+        this.activatedRoute.fragment.subscribe(res=>{
+          console.log(res)
+          this.jumptoabout(res);
+        })    
   }
-
+  public jumptoabout(res:any) {
+    setTimeout(() => {
+      document.getElementById(res)?.scrollIntoView({behavior: "smooth"});
+    }, 1000);
+  }
 }
