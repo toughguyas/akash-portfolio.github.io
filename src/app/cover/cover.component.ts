@@ -21,14 +21,6 @@ export class CoverComponent implements OnInit {
             this.j=0;
           }
         },2000);
-        this.activatedRoute.fragment.subscribe(res=>{
-          console.log(res)
-          this.jumptoabout(res);
-        })    
-  }
-  public jumptoabout(res:any) {
-    setTimeout(() => {
-      document.getElementById(res)?.scrollIntoView({behavior: "smooth"});
-    }, 1000);
+         
   }
 }
