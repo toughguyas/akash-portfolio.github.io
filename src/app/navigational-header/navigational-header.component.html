@@ -1,52 +1,60 @@
 <div class="row nav-head" *ngIf="!navToggle">
     <div class="col-4 ">
-        <img class="logo-margin" src="./assets/images/ownlogo.png" alt="" height=" 80px" width="200px">    
+        <img class="logo-margin" src="./assets/images/ownlogo.png" alt="" height=" 80px" width="200px">
     </div>
     <div class="col-8 row">
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-            Home
-        </h3>
-       </div>
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-            About
-        </h3>
-       </div>
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-            Resume
-        </h3>
-       </div>
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-            Services
-        </h3>
-       </div>
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-            Projects
-        </h3>
-       </div>
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-           Blog
-        </h3>
-       </div>
-       <div class="col-1 nav-magin hover-underline-animation">
-        <h3>
-            Contact
-        </h3>
-       </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                <a routerLink="" fragment="home">
+
+                    Home
+
+                </a>
+            </h3>
+        </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3 style="color: aliceblue;">
+                <a routerLink="" fragment="AboutMe">
+
+                    About
+
+                </a>
+            </h3>
+        </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3>
+                Resume
+            </h3>
+        </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3>
+                Services
+            </h3>
+        </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3>
+                Projects
+            </h3>
+        </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3>
+                Blog
+            </h3>
+        </div>
+        <div class="col-1 nav-magin hover-underline-animation">
+            <h3>
+                Contact
+            </h3>
+        </div>
     </div>
 </div>
 <div class="mobile-nav-head" *ngIf="navToggle">
     <div class="float-lefti">
-        <img class="" src="./assets/images/ownlogo.png" alt="" height=" 80px" width="150px">    
+        <img class="" src="./assets/images/ownlogo.png" alt="" height=" 80px" width="150px">
     </div>
     <div class="float-righti">
         <button class="btm" (click)="myFunction()">
-            <div class="container"  [ngClass]="{'change': toggleMenuIcon}">
+            <div class="container" [ngClass]="{'change': toggleMenuIcon}">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -54,42 +62,50 @@
         </button>
     </div>
 </div>
-<div class="row" *ngIf="navToggle">
-    <div style="background-color: black; padding-top: 80px;" *ngIf ="toggleMenuIcon">
-        <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
+<div class="mobile-nav" *ngIf="navToggle && toggleMenuIcon">
+
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            <a routerLink="" fragment="home">
+
                 Home
-            </h3>
-           </div><br>
-           <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
+
+            </a>
+        </h3>
+    </div><br>
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            <a routerLink="" fragment="AboutMe">
+
                 About
-            </h3>
-           </div><br>
-           <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
-                Resume
-            </h3>
-           </div><br>
-           <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
-                Services
-            </h3>
-           </div><br>
-           <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
-                Projects
-            </h3>
-           </div><br>
-           <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
-               Blog
-            </h3>
-           </div><br>
-           <div class=" nav-magin hover-underline-animation">
-            <h3 style="color: aliceblue;">
-                Contact
-            </h3>
-           </div>
+
+            </a>
+        </h3>
+    </div><br>
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            Resume
+        </h3>
+    </div><br>
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            Services
+        </h3>
+    </div><br>
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            Projects
+        </h3>
+    </div><br>
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            Blog
+        </h3>
+    </div><br>
+    <div class=" nav-magin hover-underline-animation">
+        <h3 style="color: aliceblue;">
+            Contact
+        </h3>
     </div>
+
 </div>
