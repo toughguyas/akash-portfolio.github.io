@@ -7,6 +7,7 @@ import { AppHeaderComponent } from './app-header/app-header.component';
 import { NavigationalHeaderComponent } from './navigational-header/navigational-header.component';
 import { CoverComponent } from './cover/cover.component';
 import { ResumeComponent } from './resume/resume.component';
+import { MyCurriculumComponent } from './my-curriculum/my-curriculum.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ResumeComponent } from './resume/resume.component';
     AppHeaderComponent,
     NavigationalHeaderComponent,
     CoverComponent,
-    ResumeComponent
+    ResumeComponent,
+    MyCurriculumComponent
   ],
   imports: [
     BrowserModule,

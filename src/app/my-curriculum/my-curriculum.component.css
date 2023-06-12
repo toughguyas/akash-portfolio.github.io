@@ -1,0 +1,6 @@
+.nav
+{
+    background-color: aqua;
+    position: sticky;
+    max-height: 20px;
+}
