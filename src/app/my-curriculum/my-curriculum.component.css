@@ -1,6 +1,10 @@
-.nav
-{
+.side-bar{
+    height: 100px;
     background-color: aqua;
     position: sticky;
-    max-height: 20px;
+    top: 80px;
+}
+.right-part{
+    height: 3000px;
+    background-color: red;
 }
