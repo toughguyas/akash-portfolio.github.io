@@ -16,7 +16,8 @@ import { MyCurriculumComponent } from './my-curriculum/my-curriculum.component';
     NavigationalHeaderComponent,
     CoverComponent,
     ResumeComponent,
-    MyCurriculumComponent
+    MyCurriculumComponent,
+
   ],
   imports: [
     BrowserModule,

@@ -15,31 +15,43 @@ export class AppComponent implements OnInit {
   public ngOnInit(): void {
     this.activatedRoute.fragment.subscribe(res=>{
       this.jumptoabout(res);
+
     });  
 }
 @HostListener("window:scroll", [])onWindowScroll() {
-  let a = window.scrollY.valueOf();
-  let e = document.getElementById('home')?.scrollHeight.valueOf();
-  let b = document.getElementById('AboutMe')?.scrollHeight.valueOf();
-  console.log(a,"e",e,"b",b);
-  b = ( b === undefined?0:b);
-  e = ( e === undefined?0:e)
-  if( a> e && a<b){
-    this.router.navigate([''],{fragment: 'MY_Home'}) 
-  }
-  else if(a > b ) {
-   this.router.navigate([''],{fragment: 'ABOUT_ME'})
+  let p = window.scrollY.valueOf();
+  let a = document.getElementById('AboutMe');
+  let r = document.getElementById('resume');
+  const elep = a ?.getBoundingClientRect().top? a ?.getBoundingClientRect().top:0;
+  const relep = r ?.getBoundingClientRect().top? r ?.getBoundingClientRect().top:0;
+  const aposition = elep + window.pageYOffset -80;
+  const rposition = relep + window.pageYOffset -80;
+
+  if( p< aposition){
+    this.router.navigate([''],{fragment: 'My_HOME'});
+  } else if( p >= aposition && p < rposition){
+    this.router.navigate([''],{fragment: 'ABOUT_ME'});  
+  } else {
+    this.router.navigate([''],{fragment: 'My_RESUME'});
   }
 }
  
 public jumptoabout(res:any) {
     setTimeout(() => {
+      
       if(document.getElementById(res) === null){
         return;
       }
-      let f= document.getElementById(res)?.scrollHeight.valueOf();
-      f = ( f === undefined?0:f);
-      window.scrollTo(0,f);
-    }, 1000);
+      const targetEle = document.getElementById(res);
+      const elep = targetEle ?.getBoundingClientRect().top? targetEle ?.getBoundingClientRect().top:0;
+      const position = elep + window.pageYOffset -80;
+      // document.getElementById(res)?.scrollIntoView();
+      window.scrollTo(
+        {top: position,
+          behavior: 'smooth'
+        }
+      )
+      
+    }, 0);
   }
 }

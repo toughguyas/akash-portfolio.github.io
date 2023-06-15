@@ -1,8 +1,8 @@
 .side-bar{
-    height: 100px;
     position: sticky;
     top: 80px;
     padding: 30px;
+    height: 100%;
     
 }
 .right-part{
@@ -30,7 +30,6 @@
 .edu {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 3vw;
     color: blueviolet;
 }
 .year {
@@ -79,7 +78,12 @@
 .tag {
     font-weight: bold;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2vw;
+    
     color: hotpink;
     padding-top: 30px;
+}
+#Awards{
+    background-image:url('/assets/images/confetti3.gif'); 
+    background-repeat:repeat;
+    height: 100%;
 }
