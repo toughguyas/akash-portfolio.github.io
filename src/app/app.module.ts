@@ -8,6 +8,7 @@ import { NavigationalHeaderComponent } from './navigational-header/navigational-
 import { CoverComponent } from './cover/cover.component';
 import { ResumeComponent } from './resume/resume.component';
 import { MyCurriculumComponent } from './my-curriculum/my-curriculum.component';
+import { ServicesComponent } from './services/services.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { MyCurriculumComponent } from './my-curriculum/my-curriculum.component';
     CoverComponent,
     ResumeComponent,
     MyCurriculumComponent,
+    ServicesComponent,
 
   ],
   imports: [

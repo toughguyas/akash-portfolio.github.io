@@ -26,10 +26,13 @@ export class AppComponent implements OnInit {
   let p = window.scrollY.valueOf();
   let a = document.getElementById('AboutMe');
   let r = document.getElementById('resume');
+  let s = document.getElementById('services');
   const elep = a ?.getBoundingClientRect().top? a ?.getBoundingClientRect().top:0;
   const relep = r ?.getBoundingClientRect().top? r ?.getBoundingClientRect().top:0;
+  const selep = s ?.getBoundingClientRect().top? s ?.getBoundingClientRect().top:0;
   const aposition = elep + window.pageYOffset -80;
   const rposition = relep + window.pageYOffset -80;
+  const sposition = selep + window.pageYOffset -80;
   let exp = document.getElementById('experience');
   const elepexp = exp ?.getBoundingClientRect().top? exp ?.getBoundingClientRect().top:0;
   const expposition = elepexp + window.pageYOffset -80;
@@ -48,7 +51,7 @@ export class AppComponent implements OnInit {
 
   } else if( p >= aposition && p < rposition){
     this.router.navigate([''],{fragment: 'ABOUT_ME'});  
-  } else if(p>= rposition) {
+  } else if(p>= rposition && p< sposition) {
     this.router.navigate([''],{fragment: 'My_RESUME'});
     if(p>=eduposition && p<expposition) {
       this.edu = true;
@@ -72,6 +75,8 @@ export class AppComponent implements OnInit {
     this.skills = false;
     this.award = true;
     }
+  } else if( p>=sposition) {
+    this.router.navigate([''],{fragment: 'MY_SERVICES'});  
   }
 }
 
