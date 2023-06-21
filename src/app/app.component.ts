@@ -27,12 +27,16 @@ export class AppComponent implements OnInit {
   let a = document.getElementById('AboutMe');
   let r = document.getElementById('resume');
   let s = document.getElementById('services');
+  let pr = document.getElementById('projects');
   const elep = a ?.getBoundingClientRect().top? a ?.getBoundingClientRect().top:0;
   const relep = r ?.getBoundingClientRect().top? r ?.getBoundingClientRect().top:0;
   const selep = s ?.getBoundingClientRect().top? s ?.getBoundingClientRect().top:0;
+  const prelep = pr ?.getBoundingClientRect().top? pr ?.getBoundingClientRect().top:0;
+
   const aposition = elep + window.pageYOffset -80;
   const rposition = relep + window.pageYOffset -80;
   const sposition = selep + window.pageYOffset -80;
+  const prposition = prelep + window.pageYOffset -80;
   let exp = document.getElementById('experience');
   const elepexp = exp ?.getBoundingClientRect().top? exp ?.getBoundingClientRect().top:0;
   const expposition = elepexp + window.pageYOffset -80;
@@ -75,8 +79,11 @@ export class AppComponent implements OnInit {
     this.skills = false;
     this.award = true;
     }
-  } else if( p>=sposition) {
+  } else if( p>=sposition && p< prposition) {
     this.router.navigate([''],{fragment: 'MY_SERVICES'});  
+  }else if(p>=prposition) {
+    this.router.navigate([''],{fragment: 'MY_PROJECTS'});  
+
   }
 }
 
