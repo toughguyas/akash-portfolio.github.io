@@ -27,3 +27,7 @@ a{
     font-size: 200%;
     width: 100px;
   }
+  img{
+    width: 100%;
+    height: 400px;
+  }
