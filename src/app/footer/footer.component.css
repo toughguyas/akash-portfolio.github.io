@@ -1,0 +1,22 @@
+.parent {
+    display: flex;
+    justify-content: center;
+}
+.footer
+{
+    background-color: black;
+    width: 100%;
+    height: 30vh;
+}
+.child{
+    margin: 50px;
+    @media screen and (max-width:600px){
+        margin:15px;
+    }
+    @media screen and (max-width:400px){
+        margin:5px;
+    }
+    @media screen and (max-width:300px){
+        margin:0px;
+    }
+}

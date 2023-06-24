@@ -10,6 +10,8 @@ import { ResumeComponent } from './resume/resume.component';
 import { MyCurriculumComponent } from './my-curriculum/my-curriculum.component';
 import { ServicesComponent } from './services/services.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ProjectsComponent } from './projects/projects.component';
     MyCurriculumComponent,
     ServicesComponent,
     ProjectsComponent,
+    ContactsComponent,
+    FooterComponent,
 
   ],
   imports: [
