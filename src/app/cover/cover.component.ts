@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./cover.component.css']
 })
 export class CoverComponent implements OnInit {
-  public work = [ 'FULL STACK DEVELOPER' , 'PHILOLOGIST', 'ENTERTAINER','LOVER']
+  public work = [ 'FULL STACK DEVELOPER' , 'WEB DEVELOPER', 'PRODUCT STRATEGIST','WEB DESIGNER']
   public assignwork= 'FULL STACK DEVELOPER' ;
   public j=1;
   constructor(private activatedRoute:ActivatedRoute) {
